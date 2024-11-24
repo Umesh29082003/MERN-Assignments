@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>String Length</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let str= prompt("Enter a string")
+        let toberep=prompt("Enter word to be replaced")
+        let withstr=prompt("Enter the word to replace with")
+
+        str2= str.replaceAll(toberep,withstr)
+    
+        alert("Updated String: " +str2)
+    }
+  </script>
+</body>
+</html>
+

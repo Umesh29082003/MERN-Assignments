@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Palindrome Check</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let str= prompt("Enter a string")
+        let l=str.length
+        flag=0;
+        for(x=0 ; x<l/2 ; x++)
+        {
+            if(str[x]!=str[l-x-1])
+            {
+                flag=1
+                break
+            }
+        }
+        if(flag==0)
+            alert(str + " is palindrome")
+        else
+            alert(str + " is not palindrome")
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .cards-container {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            width: 200px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cards-container">
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Profile 1">
+        <h3>John Doe</h3>
+        <p>Web Developer</p>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Profile 2">
+        <h3>Jane Smith</h3>
+        <p>Graphic Designer</p>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Profile 3">
+        <h3>Mike Johnson</h3>
+        <p>Marketing Specialist</p>
+    </div>
+</div>
+
+</body>
+</html>

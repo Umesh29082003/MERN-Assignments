@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays Filter</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let n=parseInt(prompt("Enter the length of array"))
+        let arr= new Array()
+        let arr2=new Array()
+        for(x=1;x<=n;x++)
+        {
+            arr.push(parseInt(prompt("Enter an element")))
+        }
+        for(x=0;x<n;x++)
+        {
+            if(arr[x]%2==0)
+            {
+                arr2.push(arr[x])
+            }
+        }
+        alert("Even Numbers: "+ arr2)
+    }
+  </script>
+</body>
+</html>
+

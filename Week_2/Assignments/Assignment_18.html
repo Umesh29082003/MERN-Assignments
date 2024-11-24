@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>String Charater Count</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let str= prompt("Enter a string")
+        let l=str.length
+        let val=prompt("Enter a character").charAt(0)
+        c=0
+        for(x=0;x<l;x++)
+        {
+            if(str[x]==val)
+                c=c+1
+        }
+        alert("Occurances of "+ val + " is : "+ c)
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays Reverse</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let n=parseInt(prompt("Enter the length of array"))
+        let arr= new Array()
+        for(x=1;x<=n;x++)
+        {
+            arr.push(parseInt(prompt("Enter an element")))
+        }
+        let arr2=new Array()
+        for(x=n-1;x>=0;x--)
+        {
+            arr2.push(arr[x])
+        }
+        alert("Original array= "+ arr+ "\n Reversed Array= "+ arr2)
+    }
+  </script>
+</body>
+</html>
+

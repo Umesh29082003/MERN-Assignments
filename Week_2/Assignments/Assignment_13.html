@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays Search</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let n=parseInt(prompt("Enter the length of array"))
+        let arr= new Array()
+        for(x=1;x<=n;x++)
+        {
+            arr.push(parseInt(prompt("Enter an element")))
+        }
+        let val=parseInt(prompt("Enter the value to search"))
+        index=-1
+        for(x=0;x<n;x++)
+        {
+            if(arr[x]==val)
+            {
+                index=x;
+                break;
+            }
+        }
+        if(index!=-1)
+        {
+            alert(val+ " found at index: "+ index)
+        }
+        else
+        {
+            alert(val+ " not found in array")
+        }
+    }
+  </script>
+</body>
+</html>
+

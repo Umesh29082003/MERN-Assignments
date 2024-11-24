@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays Sort</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let n=parseInt(prompt("Enter the length of array"))
+        let arr= new Array()
+        for(x=1;x<=n;x++)
+        {
+            arr.push(parseInt(prompt("Enter an element")))
+        }
+        arr2=arr.slice()
+        arr3=arr.slice()
+        for(x=0;x<n-1;x++)
+        {
+            for(y=x;y<n-x-1;y++)
+            {
+                if(arr2[y]>arr2[y+1])
+                {
+                    temp=arr2[y]
+                    arr2[y]=arr2[y+1]
+                    arr2[y+1]=temp
+                }
+            }
+        }   
+
+        for(x=0;x<n-1;x++)
+        {
+            for(y=x;y<n-x-1;y++)
+            {
+                if(arr3[y]<arr3[y+1])
+                {
+                    temp=arr3[y]
+                    arr3[y]=arr3[y+1]
+                    arr3[y+1]=temp
+                }
+            }
+        }
+
+        alert(
+            "Original array= "+ arr+ 
+            "\nAscending Order= "+ arr2 + 
+            "\nDescending Order= "+ arr3
+        )
+    }
+  </script>
+</body>
+</html>

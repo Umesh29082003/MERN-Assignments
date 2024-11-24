@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays Operations</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let arr= new Array()
+        for(x=1;x<=5;x++)
+        {
+            arr.push(parseInt(prompt("Enter an element")))
+        }
+        let s=arr[0]
+        let l=arr[0]
+        for(x=1;x<5;x++)
+        {
+            if(arr[x]<s)
+                s=arr[x]
+            if(arr[x]>l)
+                l=arr[x]
+        }
+        alert("Smallest number= "+ s +"\nLargest number= "+ l )
+    }
+  </script>
+</body>
+</html>
+

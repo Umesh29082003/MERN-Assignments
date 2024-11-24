@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Count Vowels in String</title>
+</head>
+<body>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+        let str= prompt("Enter a string")
+        let l=str.length
+        flag=0;
+        c=0
+        for(x=0 ; x<l ; x++)
+        {
+            if(['a','e','i','o','u'].includes(str[x]))
+            {
+                c=c+1;
+            }
+        }
+        alert("Number of Vowels: "+ c)
+    }
+  </script>
+</body>
+</html>
+

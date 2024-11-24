@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grading System</title>
+</head>
+<body>
+  <h1>Grading System</h1>
+  <button onclick="calculate()">Click to Start</button>
+
+  <script>
+    function calculate() {
+      let mark = parseInt(prompt("Enter marks: "));
+        if(mark>=90)
+        {
+            alert("Grade A")
+        }
+        else if(mark>=75 && mark<90)
+        {
+            alert("Grade B")
+        }
+        else if(mark>=50 && mark<75)
+        {
+            alert("Grade C")
+        }
+        else
+        {
+            alert("Grade D")
+        }
+    }
+  </script>
+</body>
+</html>
+
