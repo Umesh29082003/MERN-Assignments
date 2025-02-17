@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Loop with Conditional</title>
+</head>
+<body>
+  <h1> Loop with Conditional</h1>
+  <button onclick="calculate()">Click</button>
+
+  <script>
+    function calculate() {
+      let op = ""
+        for( let a=1; a<=10; a++)
+        {
+            if(a%3==0)
+            {
+                op=op+"Fizz\n";
+                continue;
+            }
+            if(a%5==0)
+            {
+                op=op+"Rizz\n";
+                continue;
+            }
+            op=op+a+"\n";
+        }
+        alert(op);
+    }
+  </script>
+</body>
+</html>
+

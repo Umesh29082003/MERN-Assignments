@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 3</title>
+</head>
+<body>
+  <button onclick="func()">Click Here</button>
+
+  <script>
+    function func() {
+        const today = new Date();
+        date = today.getDate();
+        month = today.getMonth();
+        year = today.getFullYear();
+        
+        const str = date + " / " + month + " / " + year;
+        alert(str)
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 9</title>
+</head>
+<body>
+  <button onclick="func()">Click Here</button>
+
+  <script>
+    function func() {
+        let date = new Date();
+        let cmas = new Date(date.getFullYear(),11,25);
+        if(date.getMonth()==11 && date.getDay>25)
+            date.setFullYear(date.getFullYear()+1)
+        let day = 24 * 60 * 60 * 1000;
+        alert(""+Math.ceil((cmas.getTime()-date.getTime())/day)+" days left for Christmas");
+    }
+  </script>
+</body>
+</html>
+

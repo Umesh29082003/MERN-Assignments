@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 10</title>
+</head>
+<body>
+    <form>
+        <p>1st Number</p><input type="text" id="num1">
+        <p>2nd Number</p><input type="text" id="num2">
+    </form>
+  <button onclick="mul()">Multiply</button>
+  <button onclick="div()">Divide</button>
+  <p>The result is: </p>
+  <span id="result"></span>
+
+  <script>
+    function mul() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        document.getElementById("result").innerHTML = num1 * num2;
+    }
+    function div() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        document.getElementById("result").innerHTML = num1 / num2;
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>  High Order Array Loops (Filter)</title>
+</head>
+<body>
+  <h1>  High Order Array Loops (Filter)</h1>
+  <button onclick="calculate()">Click</button>
+
+  <script>
+    function calculate() {
+      let arr=new Array();
+      for(let x=1; x<=5; x++)
+      {
+        arr.push(parseInt(prompt("Enter a number:")));
+      }
+      let newarr= arr.filter((item)=>item>3)
+      alert(newarr)
+    }
+    
+  </script>
+</body>
+</html>
+

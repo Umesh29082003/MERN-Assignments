@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 1</title>
+</head>
+<body>
+  <button onclick="func()">Click Here</button>
+
+  <script>
+    function func() {
+        const today = new Date();
+        day = today.getDay();
+        const arr= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        hrs = today.getHours();
+        hrs = hrs>12? hrs-12 + "PM": hrs +"AM";
+        min = today.getMinutes();
+        sec = today.getSeconds();
+        const str = "Today is: " + arr[day] + "\n Current time is: " + hrs + ":" + min + ":" + sec;
+        alert(str)
+    }
+  </script>
+</body>
+</html>
+

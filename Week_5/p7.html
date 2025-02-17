@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 7</title>
+</head>
+<body>
+  <button onclick="func()">Click Here</button>
+
+  <script>
+    function func() {
+        str=""
+        for(var x=2014; x<=2050; x++)
+        {
+            var today = new Date(x,0,1);
+            if(today.getDay() == 0)
+                str = str + " 1st Jan "+ x + " is Sunday\n"; 
+        }
+        alert(str);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> For Loop with Break and Continue</title>
+</head>
+<body>
+  <h1> For Loop with Break and Continue</h1>
+  <button onclick="calculate()">Click</button>
+
+  <script>
+    function calculate() {
+      let op = ""
+        for( let a=1; a<=10; a++)
+        {
+            if(a===3)
+                continue;
+            if(a===6)
+                break;
+            op=op+"\n"+a
+        }
+        alert(op);
+    }
+  </script>
+</body>
+</html>
+
