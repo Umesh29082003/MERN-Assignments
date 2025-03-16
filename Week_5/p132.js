@@ -4,7 +4,7 @@ function func(num)
     arr.add(1)
     function isPrime(a)
     {
-        if(x==1||x==2)
+        if(a==1||a==2)
             return true
         for(x=2;x<=Math.sqrt(a);x++)
         {
@@ -13,7 +13,7 @@ function func(num)
         }
         return true
     }
-    for(x=2;x<num;x++)
+    for(let x=2;x<=num;x++)
     {
         if(num%x==0 && isPrime(x))
         {
