@@ -1,0 +1,22 @@
+/*
+console.log(window)
+console.log(window.document)
+console.log(document)
+console.dir(document)
+*/
+
+Window -> Document -> HTML -> Head 
+                           -> Body
+
+                Head
+            Title   Meta
+            Text    attribute
+            Node    
+
+
+                        Body
+                        div -> attribute
+        Attribute <- h1          p
+                    text        text
+                    node        node
+                    
