@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Learning</title>
+        <style>
+            .bigblock{
+                background-color: #212121;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body style="background-color: #212121; color:#fff">
+        <ul class="language">
+            <li>JavaScript</li>
+        </ul>
+    </body>
+    <script>
+        //Adding more lists
+
+        //Way Number 1
+        /*
+        function addLanguage(langName){
+            const li = document.createElement('li')
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').appendChild(li)
+        }
+        addLanguage("Python")
+        addLanguage("TypeScript")
+        */
+        //problem is whenever the function is called the complete tree is to be traversed
+        //So not optimized
+
+
+        //Way Number 2
+        function addLanguage(langName){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            //Or
+            /* 
+            const addText= document.createTextNode(langName)
+            li.appendChild(addText)
+            */
+           document.querySelector('.language').appendChild(li)
+        }
+        addLanguage("Python")
+        addLanguage("Java")
+    </script>
+</html>

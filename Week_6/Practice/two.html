@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Learning</title>
+        <style>
+            .bigblock{
+                background-color: #212121;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body style="background-color: #212121; color:#fff">
+        <div class="parent">
+            <div class="day">Monday</div><div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+  
+            <div class="day">Thursday</div>
+            <!--This is a comment-->
+        </div>
+    </body>
+    <script>
+        const parent = document.querySelector('.parent')
+        
+        //Accessing Children from Parent
+        //console.log(parent);
+        //console.log(parent.children[1]);
+        //console.log(parent.children);   //give array like elements
+        //console.log(parent.children[1].innerHTML);
+        
+
+        //Accessing using loop
+        /*
+        for(let i=0;i<parent.children.length;i++)
+        {
+            console.log(parent.children[i].innerHTML);
+            parent.children[i].style.color="orange";
+        }
+        */
+
+
+        //Other properties
+        /*
+        console.log(parent.firstElementChild)
+        console.log(parent.lastElementChild)
+        */
+
+
+        //Accessing Parent from Child
+        /*
+        const dayOne = document.querySelector('.day')
+        console.log(dayOne)
+        console.log(dayOne.parentElement)
+        console.log(dayOne.nextElementSibling)  //For going to next sibling
+        */
+
+        ///Tree structure of parent
+        //console.log(parent.childNodes)  //each <br> tag or line break is a text node
+        //Takes one lien break but more than one line break do not render
+        //Comment is takes as a node too
+
+        
+    </script>
+</html>

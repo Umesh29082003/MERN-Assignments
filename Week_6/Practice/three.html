@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Learning</title>
+        <style>
+            .bigblock{
+                background-color: #212121;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body style="background-color: #212121; color:#fff">
+
+
+    </body>
+    <script>
+        //Creating DOM Element
+        const div= document.createElement('div')
+        console.log(div)
+        div.className="main"
+        div.id =Math.round(Math.random()*10+1)
+
+        div.setAttribute("title","welcome")
+        div.style.backgroundColor="green"
+        div.style.padding="12px"
+        //div.innerHTML="Hello World" //This use 2 roundtrip as brings value and then sets that
+        
+        //rather use this
+        const addText= document.createTextNode("Hello World")
+        div.appendChild(addText)
+
+        //All these will not show in memory till we attach
+        document.body.appendChild(div)
+
+    </script>
+</html>
