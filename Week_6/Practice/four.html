@@ -44,5 +44,25 @@
         }
         addLanguage("Python")
         addLanguage("Java")
+
+
+        //Edit DOM Elements
+        const secondLang= document.querySelector('li:nth-child(2)')
+        //Way 1
+        //secondLang.innerHTML = "Mojo"
+
+        //Way 2
+        const newLi = document.createElement('li')
+        newLi.textContent = "Mojo"
+        secondLang.replaceWith(newLi)
+
+        //Way 3
+        const thirdLang=document.querySelector("li:last-child")
+        thirdLang.outerHTML = '<li>TypeScript</li>'
+
+
+        //Removing DOM Element
+        const firstLang = document.querySelector('li:first-child')
+        firstLang.remove()
     </script>
 </html>
