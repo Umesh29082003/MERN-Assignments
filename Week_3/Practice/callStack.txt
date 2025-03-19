@@ -1,9 +1,0 @@
-Js Execution Context 
-1. Global Execution conext is stored in this
-2. Function Execution Context
-3. Eval Execution Context
-
-
-Phases:
-1. Memory Creation Phases
-2. Execution Phase
