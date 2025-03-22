@@ -1,0 +1,8 @@
+. JS is Synchronus or single threaded
+. Execution Context -  execute one line f code at a time -> use cal stack, meamory heap
+
+. Blocking Code vs Non-Blocking Code
+Blocking Code-> blocks flow of the program, read file Sync -> Wait unit I bring water
+Non-Blocking Code -> does not block execurtion, read file async -> You carryoen I am bringing water
+
+ 

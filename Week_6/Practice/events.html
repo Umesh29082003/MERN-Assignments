@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Learning</title>
+        <style>
+            .bigblock{
+                background-color: #212121;
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body style="background-color: #414141; color: aliceblue">
+        <h2>Amazing Images</h2>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </body>
+    <script>
+        /*
+        document.getElementById('owl').onclick = function(){    //Using this will give one less featues 
+            alert("Owl Clicked")
+        }
+        */
+
+
+
+        /*
+        document.getElementById('owl').addEventListener('click', function(e){   //e is event object, which is generated when 'clicked'
+            alert("Owl Clicked")
+            console.log(e)
+        }, false) //deafault is false so dont need to write but why to use?
+        */
+        //That value is for event propagation
+        //2 context- event bubbling(false), event capturing(true)
+
+        //Bubbling i.e false
+        /*
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log('clicked inside teh ul')
+        },true)
+
+        document.getElementById('owl').addEventListener('click', function(e){
+            console.log('owl clicked')
+        },true)
+        */
+        //Output on clicking owl //owl is indide images so clicking owl means click both
+        //owl clicked
+        //clicked inside teh ul
+
+        //Owl came first beacuse bubbling i.e. false, inner element to bubble to outer element
+
+
+
+        //Capturing i.e. true
+        /*
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log('clicked inside teh ul')
+        },true)
+
+        document.getElementById('owl').addEventListener('click', function(e){
+            console.log('owl clicked')
+        },true)  
+        */
+    
+        //clicked inside teh ul
+        //owl clicked
+
+
+
+        //If we want to keep both separate
+        /*
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log('clicked inside teh ul')
+        },false)
+
+        document.getElementById('owl').addEventListener('click', function(e){
+            console.log('owl clicked')
+            e.stopPropagation() ///to sto stop the bubble up
+        },false) 
+        //Op- owl clicked
+        */
+
+
+
+        //To stop default behavior of elements- like form's submit button, anchor tag's onclick link event
+        /*
+        document.getElementById('google').addEventListener('click',function(e){
+            e.preventDefault()
+            console.log('google clicked')
+        })
+        */
+
+
+        //Practice- When I click the li it dissappears
+        document.querySelector('#images').addEventListener('click',function(e){
+            //console.log(e)  //the event
+            //console.log(e.target)   //from whetre event is generated
+            console.log(e.target.tagName)       //get parent of source of event
+            if(e.target.tagName == 'IMG')
+            {
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+
+
+            
+            //removeIt.parentNode.removeChild(removeIt)
+        },false)
+
+
+
+
+        //THINGS TO READ ABOUT e OBJECT- type, timestamp, defaultPrevented,  
+        //target, toElement, srcElement, currentTarget
+        //clientX, clientY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keyCode
+        //rather use eventListeners
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+        //Other ways- attachEvent() , jQuery - on
+    </script>
+</html>
