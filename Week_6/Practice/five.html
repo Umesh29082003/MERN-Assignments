@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Async Learning</title>
+    </head>
+    <body style="background-color: #212121; color:#fff">
+        <h1>Hello Umesh</h1>
+        <button id="stop">Stop</button>
+    </body>
+    <script>
+        /*
+        setTimeout(function(){      //I will do the work in function after the specified time
+            console.log("Umesh")
+        }, 2000)    
+        */
+        //This also calles an API 
+        //Handler is nothing but a callback function i.e. function without name
+
+        const sayHi = function(){
+            console.log("Hello Umesh")
+        }
+
+        const changeText = function(){
+            document.querySelector('h1').innerHTML = "best JS series"
+        }
+        const changeMe = setTimeout(changeText,2000)  //another way of writting
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(changeMe)  //stops the settimeout if it is not yet done
+            console.log("Stopped")
+        })
+
+
+
+
+
+
+        //setInterval(sayHi,2000) //I will do the work repeated within an inetrval of time specified
+
+
+
+
+    </script>
+</html>
